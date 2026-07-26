@@ -3,12 +3,14 @@ import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
 import './App.css'
+import Navbar from './Navbar'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
+      <Navbar />
       <section id="center">
         <div className="hero">
           <img src={heroImg} className="base" width="170" height="179" alt="" />
@@ -67,7 +69,7 @@ function App() {
                   className="button-icon"
                   role="presentation"
                   aria-hidden="true"
-                >
+                  >
                   <use href="/icons.svg#github-icon"></use>
                 </svg>
                 GitHub
@@ -79,7 +81,7 @@ function App() {
                   className="button-icon"
                   role="presentation"
                   aria-hidden="true"
-                >
+                  >
                   <use href="/icons.svg#discord-icon"></use>
                 </svg>
                 Discord
@@ -91,7 +93,7 @@ function App() {
                   className="button-icon"
                   role="presentation"
                   aria-hidden="true"
-                >
+                  >
                   <use href="/icons.svg#x-icon"></use>
                 </svg>
                 X.com
@@ -103,7 +105,7 @@ function App() {
                   className="button-icon"
                   role="presentation"
                   aria-hidden="true"
-                >
+                  >
                   <use href="/icons.svg#bluesky-icon"></use>
                 </svg>
                 Bluesky
