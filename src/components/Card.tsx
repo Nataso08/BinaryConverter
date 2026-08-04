@@ -1,4 +1,9 @@
-function Card(props) {
+interface CardProps {
+  title: string;
+  cardId: string;
+}
+
+function Card(props: CardProps) {
     return (
     <div className="">
         <h2 className="text-black bg-sky-600 p-4 text-xl text-center rounded-t-xl rounded-b-xs">
