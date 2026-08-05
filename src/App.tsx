@@ -1,7 +1,13 @@
+import { useState } from 'react'
 import Card from './components/Card.tsx'
 import Footer from './components/Footer.tsx'
+import baseToBase from './scripts/converter.ts';
 
 function App() {
+  const [startN, setStartN] = useState("0");
+  const [startB, setStartB] = useState(2);
+  const [finalB, setFinalB] = useState(10);
+
   return (
     <>
       <div className='font-mono'>
@@ -13,10 +19,10 @@ function App() {
 
         <div className="flex flex-row flex-wrap gap-4 m-4">
           <div className="w-40 flex-1">
-            <Card title="Input" cardId="input" />
+            <Card title="Input" value={startN} onChange={setStartN}></ Card>
           </div>
           <div className="w-40 flex-1">
-            <Card title="Output" cardId="output" />
+            <Card title="Output" value={baseToBase(startN, startB, finalB)} onChange=''></ Card>
           </div>
         </div>
 
