@@ -22,17 +22,19 @@ function Card(props: any) {
 
     return (
     <div className="">
-        <h2 className="text-black bg-sky-600 p-4 text-xl text-center rounded-t-xl rounded-b-xs">
-            {props.title}
-        </h2>
-        <form action="/action_page.php">
-            <label >Choose a car:</label>
-            <select onChange={handleBaseChange} defaultValue={props.base}>
-                {NUMBERS.map((n) => (
-                    <option value={n}>{n}</option>
-                ))}
-            </select>
-        </form>
+        <div className="text-black bg-sky-600 p-4 rounded-t-xl rounded-b-xs flex flex-wrap">
+            <h2 className="text-xl text-left grow">
+                {props.title}
+            </h2>
+            <form className="text-lg text-right grow">
+                <label >Base: </label>
+                <select onChange={handleBaseChange} defaultValue={props.base}>
+                    {NUMBERS.map((n) => (
+                        <option value={n}>{n}</option>
+                    ))}
+                </select>
+            </form>
+        </div>
         
         <div className="text-black bg-white p-4 text-lg rounded-t-xs rounded-b-xl">
             <input value={props.value} onChange={handleValueChange}/>
