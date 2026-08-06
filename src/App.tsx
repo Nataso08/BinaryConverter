@@ -5,8 +5,8 @@ import baseToBase from './scripts/converter.ts';
 
 function App() {
   const [startN, setStartN] = useState("0");
-  // const [startB, setStartB] = useState(2);
-  // const [finalB, setFinalB] = useState(10);
+  const [startB, setStartB] = useState(2);
+  const [finalB, setFinalB] = useState(10);
 
   return (
     <>
@@ -19,10 +19,10 @@ function App() {
 
         <div className="flex flex-row flex-wrap gap-4 m-4">
           <div className="w-40 flex-1">
-            <Card title="Input" value={startN} onValueChange={setStartN}></ Card>
+            <Card title="Input" value={startN} onValueChange={setStartN} base={startB} onBaseChange={setStartB}></ Card>
           </div>
           <div className="w-40 flex-1">
-            <Card title="Output" value={baseToBase(startN, 10, 2)} onValueChange=''></ Card>
+          <Card title="Output" value={baseToBase(startN, startB, finalB)} onValueChange='' base={finalB} onBaseChange={setFinalB}></ Card>
           </div>
         </div>
 
