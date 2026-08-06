@@ -8,7 +8,7 @@ function Card(props: any) {
         </h2>
         
         <div className="text-black bg-white p-4 text-lg rounded-t-xs rounded-b-xl">
-            <input value={props.value} onChange={e => props.onChange(e.target.value)}/>
+            <input value={props.value} onChange={e => props.onValueChange(e.target.value)}/>
         </div>
     </div>);
 }
