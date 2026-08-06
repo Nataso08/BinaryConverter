@@ -31,6 +31,8 @@ function decToBase(startN: number, finalB: number): string {
         startN = Math.floor(startN / finalB);
     }
 
+    if (result === "") result = "0";
+
     return result;
 }
 
