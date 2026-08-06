@@ -22,13 +22,13 @@ function Card(props: any) {
 
     return (
     <div className="">
-        <div className="text-black bg-sky-600 p-4 rounded-t-xl rounded-b-xs flex flex-wrap">
-            <h2 className="text-xl text-left grow">
+        <div className="bg-sky-600 p-4 rounded-t-xl rounded-b-xs flex flex-wrap">
+            <h2 className="text-xl text-left grow"><b>
                 {props.title}
-            </h2>
+            </b></h2>
             <form className="text-lg text-right grow">
                 <label >Base: </label>
-                <select onChange={handleBaseChange} defaultValue={props.base}>
+                <select onChange={handleBaseChange} value={props.base}>
                     {NUMBERS.map((n) => (
                         <option value={n}>{n}</option>
                     ))}
@@ -36,8 +36,8 @@ function Card(props: any) {
             </form>
         </div>
         
-        <div className="text-black bg-white p-4 text-lg rounded-t-xs rounded-b-xl">
-            <input value={props.value} onChange={handleValueChange}/>
+        <div className="bg-white p-4 text-lg rounded-t-xs rounded-b-xl">
+            <b><input value={props.value} onChange={handleValueChange} className="w-full"/></b>
         </div>
     </div>);
 }
